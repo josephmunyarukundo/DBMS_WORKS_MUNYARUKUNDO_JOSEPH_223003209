@@ -1,0 +1,189 @@
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 13
+Server version: 8.3.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use ruhande;
+Database changed
+mysql> create table ngoma(id int(16), F_name char(30),L_name char(30),Gender char(10), Province char(20), District char(20), Sector char(20), Cell char(20), Email_adress char(20), Phone_no int(10));
+Query OK, 0 rows affected, 2 warnings (0.02 sec)
+
+mysql> insert into ngoma values('633698047463232', 'Munyarukundo', 'Joseph', 'male', 'Eastern', 'Nyagatare', 'karama', 'karama', 'munyarukundo@gmail.com', '0786215888');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into ngoma values('120034974979474993', 'Shema', 'Devis', 'male', 'Eastern', 'Nyagatare', 'karangazi', 'kizirakombe', 'shema@gmail.com', '078383948');
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> insert into ngoma values('1200403930928394', 'Umunyana', 'shalon', 'female', 'Eastern', 'Nyagatare', 'rwimiyaga', 'kabeza', 'shalon@gmail.com', '0784894745');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values('198048483048553', 'Kwikiriza', 'peter', 'male', 'Eastern', 'Bugesera', 'nyamata', 'igihozo', 'kwikiriza@gmail.com', '0723837484');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values('19949234794949443', 'Mugabo', 'Wilson', 'male', 'Western', 'Rusizi', 'nyamikamba', 'ndumunyarwanda', 'mugabo@gmail.com', '072954995');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values('19383744864838', 'Mutabazi', 'Eric', 'male', 'southern', 'Muhanga', 'nyarurema', 'ruzi', 'mutabazi@gmail.com', '0749478423');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values('1943984248948242', 'Murungi', 'Ester', 'female', 'nothern', 'burera', 'Rukomo', 'abera', 'murungi@gmail.com', '074448433');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values('1200242724924', 'Kanyana', 'brendah', 'female', 'nothern', 'burera', 'Rukomo', 'abera', 'Kanyana@gmail.com', '0738489484');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values('1200242724924', 'Kanyana', 'brendah', 'female', 'nothern', 'burera', 'Rukomo', 'abera', 'Kanyana@gmail.com', '0738489484');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values('12005934834983', 'Kamugisha', 'yves', 'female', 'Kigali', 'Kicukiro', 'kimironko', 'muhoza', 'Kamugisha@gmail.com', '0742827247');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> select * from ngoma;
++------------+--------------+---------+--------+----------+-----------+------------+----------------+----------------------+-----------+
+| id         | F_name       | L_name  | Gender | Province | District  | Sector     | Cell           | Email_adress         | Phone_no  |
++------------+--------------+---------+--------+----------+-----------+------------+----------------+----------------------+-----------+
+| 2147483647 | Munyarukundo | Joseph  | male   | Eastern  | Nyagatare | karama     | karama         | munyarukundo@gmail.c | 786215888 |
+| 2147483647 | Shema        | Devis   | male   | Eastern  | Nyagatare | karangazi  | kizirakombe    | shema@gmail.com      |  78383948 |
+| 2147483647 | Umunyana     | shalon  | female | Eastern  | Nyagatare | rwimiyaga  | kabeza         | shalon@gmail.com     | 784894745 |
+| 2147483647 | Kwikiriza    | peter   | male   | Eastern  | Bugesera  | nyamata    | igihozo        | kwikiriza@gmail.com  | 723837484 |
+| 2147483647 | Mugabo       | Wilson  | male   | Western  | Rusizi    | nyamikamba | ndumunyarwanda | mugabo@gmail.com     |  72954995 |
+| 2147483647 | Mutabazi     | Eric    | male   | southern | Muhanga   | nyarurema  | ruzi           | mutabazi@gmail.com   | 749478423 |
+| 2147483647 | Murungi      | Ester   | female | nothern  | burera    | Rukomo     | abera          | murungi@gmail.com    |  74448433 |
+| 2147483647 | Kanyana      | brendah | female | nothern  | burera    | Rukomo     | abera          | Kanyana@gmail.com    | 738489484 |
+| 2147483647 | Kanyana      | brendah | female | nothern  | burera    | Rukomo     | abera          | Kanyana@gmail.com    | 738489484 |
+| 2147483647 | Kamugisha    | yves    | female | Kigali   | Kicukiro  | kimironko  | muhoza         | Kamugisha@gmail.com  | 742827247 |
++------------+--------------+---------+--------+----------+-----------+------------+----------------+----------------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select F_name, L_name,phone_no from ngoma;
++--------------+---------+-----------+
+| F_name       | L_name  | phone_no  |
++--------------+---------+-----------+
+| Munyarukundo | Joseph  | 786215888 |
+| Shema        | Devis   |  78383948 |
+| Umunyana     | shalon  | 784894745 |
+| Kwikiriza    | peter   | 723837484 |
+| Mugabo       | Wilson  |  72954995 |
+| Mutabazi     | Eric    | 749478423 |
+| Murungi      | Ester   |  74448433 |
+| Kanyana      | brendah | 738489484 |
+| Kanyana      | brendah | 738489484 |
+| Kamugisha    | yves    | 742827247 |
++--------------+---------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma add status;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> alter table ngoma add status char(20);
+Query OK, 10 rows affected (0.03 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select * from ngoma;
++------------+--------------+---------+--------+----------+-----------+------------+----------------+----------------------+-----------+--------+
+| id         | F_name       | L_name  | Gender | Province | District  | Sector     | Cell           | Email_adress         | Phone_no  | status |
++------------+--------------+---------+--------+----------+-----------+------------+----------------+----------------------+-----------+--------+
+| 2147483647 | Munyarukundo | Joseph  | male   | Eastern  | Nyagatare | karama     | karama         | munyarukundo@gmail.c | 786215888 | NULL   |
+| 2147483647 | Shema        | Devis   | male   | Eastern  | Nyagatare | karangazi  | kizirakombe    | shema@gmail.com      |  78383948 | NULL   |
+| 2147483647 | Umunyana     | shalon  | female | Eastern  | Nyagatare | rwimiyaga  | kabeza         | shalon@gmail.com     | 784894745 | NULL   |
+| 2147483647 | Kwikiriza    | peter   | male   | Eastern  | Bugesera  | nyamata    | igihozo        | kwikiriza@gmail.com  | 723837484 | NULL   |
+| 2147483647 | Mugabo       | Wilson  | male   | Western  | Rusizi    | nyamikamba | ndumunyarwanda | mugabo@gmail.com     |  72954995 | NULL   |
+| 2147483647 | Mutabazi     | Eric    | male   | southern | Muhanga   | nyarurema  | ruzi           | mutabazi@gmail.com   | 749478423 | NULL   |
+| 2147483647 | Murungi      | Ester   | female | nothern  | burera    | Rukomo     | abera          | murungi@gmail.com    |  74448433 | NULL   |
+| 2147483647 | Kanyana      | brendah | female | nothern  | burera    | Rukomo     | abera          | Kanyana@gmail.com    | 738489484 | NULL   |
+| 2147483647 | Kanyana      | brendah | female | nothern  | burera    | Rukomo     | abera          | Kanyana@gmail.com    | 738489484 | NULL   |
+| 2147483647 | Kamugisha    | yves    | female | Kigali   | Kicukiro  | kimironko  | muhoza         | Kamugisha@gmail.com  | 742827247 | NULL   |
++------------+--------------+---------+--------+----------+-----------+------------+----------------+----------------------+-----------+--------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma status = 'single' where L_name = 'Joseph';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'single' where L_name = 'Joseph'' at line 1
+mysql> update ngoma set status = 'single' where L_name = 'Joseph';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ngoma set status = 'mariage' where L_name = 'peter';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ngoma set status = 'single' where L_name = 'Wilson';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from ngoma;
++------------+--------------+---------+--------+----------+-----------+------------+----------------+----------------------+-----------+---------+
+| id         | F_name       | L_name  | Gender | Province | District  | Sector     | Cell           | Email_adress         | Phone_no  | status  |
++------------+--------------+---------+--------+----------+-----------+------------+----------------+----------------------+-----------+---------+
+| 2147483647 | Munyarukundo | Joseph  | male   | Eastern  | Nyagatare | karama     | karama         | munyarukundo@gmail.c | 786215888 | single  |
+| 2147483647 | Shema        | Devis   | male   | Eastern  | Nyagatare | karangazi  | kizirakombe    | shema@gmail.com      |  78383948 | NULL    |
+| 2147483647 | Umunyana     | shalon  | female | Eastern  | Nyagatare | rwimiyaga  | kabeza         | shalon@gmail.com     | 784894745 | NULL    |
+| 2147483647 | Kwikiriza    | peter   | male   | Eastern  | Bugesera  | nyamata    | igihozo        | kwikiriza@gmail.com  | 723837484 | mariage |
+| 2147483647 | Mugabo       | Wilson  | male   | Western  | Rusizi    | nyamikamba | ndumunyarwanda | mugabo@gmail.com     |  72954995 | single  |
+| 2147483647 | Mutabazi     | Eric    | male   | southern | Muhanga   | nyarurema  | ruzi           | mutabazi@gmail.com   | 749478423 | NULL    |
+| 2147483647 | Murungi      | Ester   | female | nothern  | burera    | Rukomo     | abera          | murungi@gmail.com    |  74448433 | NULL    |
+| 2147483647 | Kanyana      | brendah | female | nothern  | burera    | Rukomo     | abera          | Kanyana@gmail.com    | 738489484 | NULL    |
+| 2147483647 | Kanyana      | brendah | female | nothern  | burera    | Rukomo     | abera          | Kanyana@gmail.com    | 738489484 | NULL    |
+| 2147483647 | Kamugisha    | yves    | female | Kigali   | Kicukiro  | kimironko  | muhoza         | Kamugisha@gmail.com  | 742827247 | NULL    |
++------------+--------------+---------+--------+----------+-----------+------------+----------------+----------------------+-----------+---------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma drop status;
+Query OK, 10 rows affected (0.05 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select * from ngoma;
++------------+--------------+---------+--------+----------+-----------+------------+----------------+----------------------+-----------+
+| id         | F_name       | L_name  | Gender | Province | District  | Sector     | Cell           | Email_adress         | Phone_no  |
++------------+--------------+---------+--------+----------+-----------+------------+----------------+----------------------+-----------+
+| 2147483647 | Munyarukundo | Joseph  | male   | Eastern  | Nyagatare | karama     | karama         | munyarukundo@gmail.c | 786215888 |
+| 2147483647 | Shema        | Devis   | male   | Eastern  | Nyagatare | karangazi  | kizirakombe    | shema@gmail.com      |  78383948 |
+| 2147483647 | Umunyana     | shalon  | female | Eastern  | Nyagatare | rwimiyaga  | kabeza         | shalon@gmail.com     | 784894745 |
+| 2147483647 | Kwikiriza    | peter   | male   | Eastern  | Bugesera  | nyamata    | igihozo        | kwikiriza@gmail.com  | 723837484 |
+| 2147483647 | Mugabo       | Wilson  | male   | Western  | Rusizi    | nyamikamba | ndumunyarwanda | mugabo@gmail.com     |  72954995 |
+| 2147483647 | Mutabazi     | Eric    | male   | southern | Muhanga   | nyarurema  | ruzi           | mutabazi@gmail.com   | 749478423 |
+| 2147483647 | Murungi      | Ester   | female | nothern  | burera    | Rukomo     | abera          | murungi@gmail.com    |  74448433 |
+| 2147483647 | Kanyana      | brendah | female | nothern  | burera    | Rukomo     | abera          | Kanyana@gmail.com    | 738489484 |
+| 2147483647 | Kanyana      | brendah | female | nothern  | burera    | Rukomo     | abera          | Kanyana@gmail.com    | 738489484 |
+| 2147483647 | Kamugisha    | yves    | female | Kigali   | Kicukiro  | kimironko  | muhoza         | Kamugisha@gmail.com  | 742827247 |
++------------+--------------+---------+--------+----------+-----------+------------+----------------+----------------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select * from ngoma where Gender = 'female' AND Sector = 'rwimiyaga';
++------------+----------+--------+--------+----------+-----------+-----------+--------+------------------+-----------+
+| id         | F_name   | L_name | Gender | Province | District  | Sector    | Cell   | Email_adress     | Phone_no  |
++------------+----------+--------+--------+----------+-----------+-----------+--------+------------------+-----------+
+| 2147483647 | Umunyana | shalon | female | Eastern  | Nyagatare | rwimiyaga | kabeza | shalon@gmail.com | 784894745 |
++------------+----------+--------+--------+----------+-----------+-----------+--------+------------------+-----------+
+1 row in set (0.02 sec)
+
+mysql> select * from ngoma where Gender = 'female' AND Sector = 'Rukomo';
++------------+---------+---------+--------+----------+----------+--------+-------+-------------------+-----------+
+| id         | F_name  | L_name  | Gender | Province | District | Sector | Cell  | Email_adress      | Phone_no  |
++------------+---------+---------+--------+----------+----------+--------+-------+-------------------+-----------+
+| 2147483647 | Murungi | Ester   | female | nothern  | burera   | Rukomo | abera | murungi@gmail.com |  74448433 |
+| 2147483647 | Kanyana | brendah | female | nothern  | burera   | Rukomo | abera | Kanyana@gmail.com | 738489484 |
+| 2147483647 | Kanyana | brendah | female | nothern  | burera   | Rukomo | abera | Kanyana@gmail.com | 738489484 |
++------------+---------+---------+--------+----------+----------+--------+-------+-------------------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from ngoma where Gender = 'female' OR Sector = 'nyamikamba';
++------------+-----------+---------+--------+----------+-----------+------------+----------------+---------------------+-----------+
+| id         | F_name    | L_name  | Gender | Province | District  | Sector     | Cell           | Email_adress        | Phone_no  |
++------------+-----------+---------+--------+----------+-----------+------------+----------------+---------------------+-----------+
+| 2147483647 | Umunyana  | shalon  | female | Eastern  | Nyagatare | rwimiyaga  | kabeza         | shalon@gmail.com    | 784894745 |
+| 2147483647 | Mugabo    | Wilson  | male   | Western  | Rusizi    | nyamikamba | ndumunyarwanda | mugabo@gmail.com    |  72954995 |
+| 2147483647 | Murungi   | Ester   | female | nothern  | burera    | Rukomo     | abera          | murungi@gmail.com   |  74448433 |
+| 2147483647 | Kanyana   | brendah | female | nothern  | burera    | Rukomo     | abera          | Kanyana@gmail.com   | 738489484 |
+| 2147483647 | Kanyana   | brendah | female | nothern  | burera    | Rukomo     | abera          | Kanyana@gmail.com   | 738489484 |
+| 2147483647 | Kamugisha | yves    | female | Kigali   | Kicukiro  | kimironko  | muhoza         | Kamugisha@gmail.com | 742827247 |
++------------+-----------+---------+--------+----------+-----------+------------+----------------+---------------------+-----------+
+6 rows in set (0.00 sec)
+
+mysql>
